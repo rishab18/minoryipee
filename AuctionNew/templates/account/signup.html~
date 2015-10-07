@@ -1,0 +1,15 @@
+{% extends "account/authentication/auth_base.html" %}
+{% load material_form %}
+{% block title %} AK | Sign Up {% endblock %}
+{% block auth_content %}
+<form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+  <!--  <input type="hidden" name="next" value="{{ next }}" /> -->
+    {% form form=form %}{% endform %}
+    <div class="row">
+        <div class="col s12"> 
+            <button type="submit" name="signup" class="btn waves-effect waves-light left">Sign Up</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "account/authentication/auth_base.html" %}
+{% load material_form %}
+{% block title %} Auction King {% endblock %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="nav-wrapper" id="id_name">
+<form method="GET" action="{ url 'search_product' }" enctype="multipart/form-data">
+{% csrf_token %}
+{% form form=form %} {% endform %}
+</form>
+</div>
+
+<form method='GET' action='#' enctype="multipart/form-data">
+{% csrf_token %}
+{% form form=form1 %} {% endform %}
+</form>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'product/js/search.js' %}"> </script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "account/authentication/auth_base.html" %}
+{% load material_form %}
+{% block title %} AK | Confirmation {% endblock %}
+{% block auth_content %}
+<p> Thanks for registering with us.<p>
+<br> <br>
+<p> A email has been sent to you with the activation link.<p>
+{% endblock %}
+
+
+
+<h1> Thanks for registering with us.<h1>
+<h2> A email has been sent to you with the activation link.</h2>

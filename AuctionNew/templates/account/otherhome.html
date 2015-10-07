@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <script src="{% static 'base/js/jquery-1.11.1.js' %}"></script>
+        <script src="{% static 'account/js/followunfollow.js' %}"></script>
+    </head>
+    <body>
+        <h1> Hi {{ user.username }} ! Welcome to other page </a></h1>
+        {% for u in users %}
+        <div>
+            {{u.username}} 
+            {% if u in user.following.all %}
+            <a class = 'fnuf unfollow' data-uid = "{{u.id}}" href="#"> unfollow</a>
+            {% else %}
+            <a class = 'fnuf follow' data-uid = "{{u.id}}" href="#"> follow</a>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+        <script>
+            function init() {
+                followUnfollow.init();
+            }
+            $(document).ready(init);
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image:url('online2.jpg');
+}
+main {
+    margin-top: 00px;
+    flex: 1 0 auto;
+}
+#imggg {
+margin-top:10px;
+width:100px;
+height:70px;
+margin-left:200px;
+margin-bottom:25px;
+}
+
+.brand-logo img {
+    height: 54px;
+    width: auto;
+    margin-top: 5px;
+    margin-left:25px;	
+}
+
+
+.head {
+	background-color: #26a69a;
+}
+
+.redfooter{
+	background-color: #26a69a;
+	margin-top: 20px;
+}
+
+footer.pagefooter{
+    margin-top: 20px;
+    color:rgba(255,255,255,0.8);
+}
+
+footer.pagefooter .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer.pagefooter .footer-copyright{
+    font-size: 28px;
+}
+
+
+form small.error {
+    font-size: 100%;
+}
+
+form .errors small.error {
+    font-size: 75%;
+}
+
+form a.cb-form.right {
+   // line-height: 36px;
+}

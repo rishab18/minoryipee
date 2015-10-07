@@ -1,0 +1,9 @@
+{% extends "account/base.html" %}
+{% load material_form %}
+{% block title %} Auction King {% endblock %}
+
+{% block content %}
+<form method="GET" action="{ url 'search_product' }" >
+{% form form = form %} {% endform %}
+</form>
+{% end block %}

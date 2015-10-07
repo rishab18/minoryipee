@@ -1,0 +1,33 @@
+var bidaddManager = (function(formHelper) {
+    function add() {
+        var form = $('#add-bid-form')[0];
+        var bid = $(form).find('input[name=BidPrice]').val();
+        var productid = $(this).attr('product-uid');
+        var form_data = new FormData(form);
+        
+        formHelper.clearErrors.call(form);
+
+        function onSuccess(data, status, xhr) {
+            $('#addbid').closeModal();
+            formHelper.clear.call(form);
+        }
+
+        $.ajax({
+            url : 'products/' + productid + '/bid/',
+            type: 'POST',
+            dataType: 'json',
+            data: form_data,
+            processData: false,
+            contentType: false,
+            success: onSuccess,
+            error: formHelper.handleErrors.bind(form)
+		.bind(this)
+        });
+    }
+
+    return {
+        init : function()  {
+            $('#add-bid-btn').click(add);
+        }
+    };
+})(AjaxFormHelper);

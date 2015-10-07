@@ -1,0 +1,14 @@
+.bid-display {
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.bid-topic {
+    display: block;
+    width: 172px;
+    height: 200px;
+}
+.bid-box-topic {
+   display:block;
+   height: 20px;
+}
